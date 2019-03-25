@@ -1,0 +1,50 @@
+.FeatureTabGroup {
+  display: flex;
+  width: 75%;
+  margin: 64px 12.5% 64px 12.5%;
+}
+
+.FeatureTabGroup-section {
+  flex-grow: 1;
+  margin: 16px;
+}
+
+.FeatureTabGroup-section-header {
+  text-align: center;
+}
+
+.FeatureTabGroup-section-content {
+  box-shadow: 4px 4px 32px rgba(0, 0, 0, 50%);
+}
+
+.FeatureTabGroup-item {
+  background-color: white;
+  padding: 0;
+  transition-duration: 0.25s;
+  position: relative;
+}
+
+.FeatureTabGroup-item:hover {
+  padding-bottom: 32px;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 25%);
+  cursor: pointer;
+}
+
+.FeatureTabGroup-item-shadow {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 25%));
+  bottom: 0;
+  height: 8px;
+  opacity: 0;
+  position: absolute;
+  transition-duration: 0.25s;
+  width: 100%;
+}
+
+.FeatureTabGroup-item:hover .FeatureTabGroup-item-shadow {
+  opacity: 1;
+}
+
+.FeatureTabGroup-section-footer {
+  height: 8px;
+  background-color: #444;
+}
