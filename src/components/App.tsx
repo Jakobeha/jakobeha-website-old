@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import logo from '../resources/logo.svg';
 import '../styles/App.css';
-import { IFeature, IStoreState } from '../types';
+import { FeatureType, IFeature, IStoreState } from '../types';
 import { Action } from '../types/actions';
 import FeatureTabGroup from './FeatureTabGroup';
 import FeatureWindow from './FeatureWindow';
@@ -22,8 +22,11 @@ function App({ selected }: IProps): JSX.Element {
         Code is incredibly diverse. Two pieces of code might perform the same
         task, but be completely different in syntax, structure, and more.
       </p>
-      { (selected.length !== 0) ? <FeatureWindow features={selected} /> : null }
-      <FeatureTabGroup />
+      <div className="App-content">
+        <FeatureTabGroup type={FeatureType.Language} />
+        <FeatureWindow features={selected} />
+        <FeatureTabGroup type={FeatureType.Paradigm} />
+      </div>
     </div>
   );
 }

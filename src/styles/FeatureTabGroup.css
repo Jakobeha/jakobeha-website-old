@@ -1,19 +1,16 @@
 .FeatureTabGroup {
-  display: flex;
-  width: 75%;
-  margin: 64px 12.5% 64px 12.5%;
+  min-width: 196px;
+  max-width: 196px;
+  flex-grow: 0;
+  margin: 0 16px;
 }
 
-.FeatureTabGroup-section {
-  flex-grow: 1;
-  margin: 16px;
-}
-
-.FeatureTabGroup-section-header {
+.FeatureTabGroup-header {
+  margin-top: 64px;
   text-align: center;
 }
 
-.FeatureTabGroup-section-content {
+.FeatureTabGroup-content {
   box-shadow: 4px 4px 32px rgba(0, 0, 0, 50%);
 }
 
@@ -44,7 +41,7 @@
   opacity: 1;
 }
 
-.FeatureTabGroup-section-footer {
+.FeatureTabGroup-footer {
   height: 8px;
   background-color: #444;
 }

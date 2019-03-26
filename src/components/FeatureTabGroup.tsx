@@ -1,58 +1,55 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import "../styles/FeatureTabGroup.css";
-import { IFeature, IFeatureTypeMap, IStoreState } from "../types";
+import { FeatureType, IFeature, IStoreState } from "../types";
 import { Action, ActionType, ISelectFeature } from '../types/actions';
-import * as FeatureType from "../util/FeatureType";
-import FeatureTypeMap from '../util/FeatureTypeMap';
+import * as FeatureType_ from '../util/FeatureType';
 import FeatureTab from './FeatureTab';
 
+export interface IPropsExtra {
+  type: FeatureType;
+}
+
 export interface IPropsState {
-  featuresByType: IFeatureTypeMap<IFeature[]>;
-  hasSelectedFeature: boolean;
+  features: IFeature[];
 }
 
 export interface IPropsActions {
   selectFeature(feature: IFeature): void;
 };
 
-export type IProps = IPropsState & IPropsActions;
+export type IProps = IPropsExtra & IPropsState & IPropsActions;
 
 // tslint:disable:no-construct
-function FeatureTabGroup({ featuresByType, selectFeature }: IProps) {
+function FeatureTabGroup({ type, features, selectFeature }: IProps) {
   return (
     <div className="FeatureTabGroup">
-      {FeatureTypeMap.flatten(FeatureTypeMap.map(featuresByType, (features, type) => (
-        <div className="FeatureTabGroup-section" key={type}>
-          <h2 className="FeatureTabGroup-section-header">{FeatureType.title(type)}</h2>
-          <div className="FeatureTabGroup-section-content">
-            {features.map((feature, idx) => {
-              function onSelect() {
-                selectFeature(feature);
-              }
-              return (
-                <div
-                  className="FeatureTabGroup-item"
-                  key={feature.name}
-                  onClick={onSelect}
-                >
-                  <FeatureTab feature={feature} isClosable={false} isSticky={false} />
-                  <div className="FeatureTabGroup-item-shadow" />
-                </div>
-              );
-            })}
-          </div>
-          <div className="FeatureTabGroup-section-footer" />
+        <h2 className="FeatureTabGroup-header">{FeatureType_.title(type)}</h2>
+        <div className="FeatureTabGroup-content">
+          {features.map((feature, idx) => {
+            function onSelect() {
+              selectFeature(feature);
+            }
+            return (
+              <div
+                className="FeatureTabGroup-item"
+                key={feature.name}
+                onClick={onSelect}
+              >
+                <FeatureTab feature={feature} isClosable={false} isSticky={false} />
+                <div className="FeatureTabGroup-item-shadow" />
+              </div>
+            );
+          })}
         </div>
-      )))}
+        <div className="FeatureTabGroup-footer" />
     </div>
   )
 }
 
-export function mapStateToProps({ features, selected }: IStoreState): IPropsState {
+export function mapStateToProps({ features }: IStoreState, { type }: IPropsExtra): IPropsState {
   return {
-    featuresByType: features,
-    hasSelectedFeature: selected.length !== 0
+    features: features[type]
   };
 }
 

@@ -1,5 +1,7 @@
+import * as assert from 'assert';
 import * as React from 'react';
 import { connect } from 'react-redux';
+import { NULL_FEATURE_COLOR } from 'src/constants';
 import { Action, ActionType, IDeselectFeature } from 'src/types/actions';
 import "../styles/FeatureTab.css";
 import { IFeature, IStoreState } from '../types';
@@ -9,7 +11,7 @@ export interface IPropsActions {
 };
 
 export interface IPropsExtra {
-  feature: IFeature;
+  feature: IFeature | null;
   isClosable: boolean;
   isSticky: boolean;
 };
@@ -17,17 +19,18 @@ export interface IPropsExtra {
 export type IProps = IPropsActions & IPropsExtra;
 
 function FeatureTab({ feature, isClosable, isSticky, close }: IProps) {
+  assert(feature !== null || !isClosable);
   return (
     <div
       className={`FeatureTab ${isSticky ? "sticky-navbar" : ""}`}
-      style={{ backgroundColor: feature.color }}
+      style={{ backgroundColor: feature !== null ? feature.color : NULL_FEATURE_COLOR }}
     >
       {isClosable ? (
         <div className="FeatureTab-closeButton" onClick={close}>
           x
         </div>
       ) : null}
-      <h2 className="FeatureTab-title">{feature.name}</h2>
+      { feature !== null ? <h2 className="FeatureTab-title">{feature.name}</h2> : null }
     </div>
   );
 }
@@ -41,7 +44,7 @@ export function mapDispatchToProps(dispatch: React.Dispatch<Action>, { feature }
     close: () => {
       const action: IDeselectFeature = {
         type: ActionType.DeselectFeature,
-        feature
+        feature: feature!
       };
       dispatch(action);
     }

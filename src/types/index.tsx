@@ -1,15 +1,11 @@
 export enum FeatureType {
   Language = "language",
-  Paradigm = "paradigm",
-  Library = "library",
-  IDE = "ide"
+  Paradigm = "paradigm"
 };
 
 export interface IFeatureTypeMap<T> {
   language: T,
-  paradigm: T,
-  library: T,
-  ide: T
+  paradigm: T
 }
 
 export type AttrString = string;

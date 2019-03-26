@@ -3,11 +3,11 @@ import { IAnonFeature, IFeature, IFeatureTypeMap } from './types';
 import * as FeatureType_ from './util/FeatureType';
 import FeatureTypeMap from './util/FeatureTypeMap';
 
+export const NULL_FEATURE_COLOR: string = "#888888";
+
 const FEATURE_HUES: IFeatureTypeMap<number> = {
   language: 100,
-  paradigm: 30,
-  library: 210,
-  ide: 290
+  paradigm: 30
 }
 
 export const FEATURES: IFeatureTypeMap<IFeature[]> = FeatureTypeMap.map(
