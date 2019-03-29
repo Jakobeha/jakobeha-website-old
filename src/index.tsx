@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import App from './components/App';
-import { FEATURES } from './constants';
+import { LANGUAGES } from './constants';
 import registerServiceWorker from './events/registerServiceWorker';
 import { reduce } from './reducers';
 import './styles/index.css';
@@ -12,7 +12,7 @@ import { Action } from './types/actions';
 import * as StickyNavbar from "./util/StickyNavbar";
 
 const initialState: IStoreState = {
-  features: FEATURES,
+  languages: LANGUAGES,
   selected: []
 };
 const store = createStore<IStoreState, Action, {}, {}>(reduce, initialState);
@@ -26,6 +26,5 @@ ReactDOM.render(
 registerServiceWorker();
 StickyNavbar.updateOnScroll();
 store.subscribe(() => {
-  // TODO: After timeout
-  StickyNavbar.updateAll()
+  requestAnimationFrame(() => StickyNavbar.updateAll());
 });

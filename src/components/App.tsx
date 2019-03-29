@@ -1,44 +1,41 @@
+import contextNote from "!raw-loader!../resources/contextNote.md";
+import intro from "!raw-loader!../resources/intro.md";
+import worksCited from "!raw-loader!../resources/worksCited.md";
 import * as React from 'react';
-import { connect } from 'react-redux';
-import logo from '../resources/logo.svg';
 import '../styles/App.css';
-import { FeatureType, IFeature, IStoreState } from '../types';
-import { Action } from '../types/actions';
-import FeatureTabGroup from './FeatureTabGroup';
-import FeatureWindow from './FeatureWindow';
+import Comparison from './Comparison';
+import Markdown from './Markdown';
+import NotFound from './NotFound';
 
-export interface IProps {
-  selected: IFeature[];
-}
-
-function App({ selected }: IProps): JSX.Element {
+export default function App({}: {}): JSX.Element {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">Programming Encyclopedia</h1>
+        <h1 className="App-title">Programming Language Comparison</h1>
+        <div className="App-links">
+          <a className="App-link App-link-intro" href="./index.html">Introduction</a>
+          <a className="App-link App-link-main" href="./main.html">Main</a>
+          <a className="App-link App-link-works-cited" href="./worksCited.html">Works Cited</a>
+          <a className="App-link App-link-context-note" href="./contextNote.html">Context Note</a>
+        </div>
       </header>
-      <p className="App-intro">
-        Code is incredibly diverse. Two pieces of code might perform the same
-        task, but be completely different in syntax, structure, and more.
-      </p>
-      <div className="App-content">
-        <FeatureTabGroup type={FeatureType.Language} />
-        <FeatureWindow features={selected} />
-        <FeatureTabGroup type={FeatureType.Paradigm} />
-      </div>
+      {specificContent()}
     </div>
   );
 }
 
-export function mapStateToProps({ selected }: IStoreState): IProps {
-  return {
-    selected
-  };
+function specificContent(): JSX.Element {
+  switch (window.location.pathname) {
+    case "/":
+    case "/index.html":
+      return <Markdown content={intro} visitLink={true} />
+    case "/main.html":
+      return <Comparison />
+    case "/worksCited.html":
+      return <Markdown content={worksCited} visitLink={false} />
+    case "/contextNote.html":
+      return <Markdown content={contextNote} visitLink={false} />
+    default:
+      return <NotFound path={window.location.pathname} />;
+  }
 }
-
-export function mapDispatchToProps(dispatch: React.Dispatch<Action>): {} {
-  return {};
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);

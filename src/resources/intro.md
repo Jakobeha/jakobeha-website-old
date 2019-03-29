@@ -1,0 +1,9 @@
+# Introduction
+
+This website is designed to easily compare languages, so you can choose one to learn or start a project with. You can select a language and view its key features, suggested use cases, and relative benefits and drawbacks, along with sample code, a brief history and background, and links to tutorials. Then you can select more languages, and view these details side-by-side, for easy comparison.
+
+There are many types of programming languages, each has their own purpose, benefits and drawbacks. Some languages are particularly suited for certain types of projects, others are general-purpose. Some languages are designed for fast code, some to clearly express a paradigm (coding style) and its abstractions, and some to simply be interesting and educational.
+
+Practically all languages are flexible enough that they won't ever *limit* you - you can write code in almost any styles, for almost any purpose (e.g. efficient code, a small script), in almost any language. But some languages let have built-in support for certain paradigms, some encourage / discourage you to write a code certain way, and some  require you to learn certain concepts. Therefore, it's a good idea to be at least vaguely familiar with the many different languages.
+
+Note that most of the information presented is based on common experience and opinion, meant as suggestions. If you want clarification and particular details, follow the provided links. For example, some languages are be designed for speed, or typically help developers write fast code. These languages would be described as "fast". But of course, you could still write a slow program in a "fast" langauge, or a faster program in a "slow" language. Ultimately, the best way to learn about a language is to try it yourself. But that takes time, which is why this website exists.

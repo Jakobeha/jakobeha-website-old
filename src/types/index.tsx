@@ -1,36 +1,40 @@
-export enum FeatureType {
-  Language = "language",
-  Paradigm = "paradigm"
+export enum LanguageType {
+  General = "general",
+  Scripting = "scripting",
+  Efficient = "efficient",
+  Other = "other"
 };
 
-export interface IFeatureTypeMap<T> {
-  language: T,
-  paradigm: T
+export interface ILanguageTypeMap<T> {
+  general: T,
+  scripting: T
+  efficient: T
+  other: T
 }
 
 export type AttrString = string;
-export type CodeString = string;
 
-export interface IAnonFeature {
+export interface IAnonLanguage {
   name: string;
-  summary: AttrString;
-  keyFeatures: AttrString[];
-  benefits: AttrString[];
-  drawbacks: AttrString[];
-  useCases: AttrString[];
-  background: AttrString;
-  examples: CodeString[];
+  summary?: AttrString;
+  keyFeatures?: AttrString[];
+  benefits?: AttrString[];
+  drawbacks?: AttrString[];
+  useCases?: AttrString[];
+  history?: AttrString;
+  example?: AttrString;
+  tutorials?: string[];
 };
 
-export type FeatureId = number
+export type LanguageId = number
 
-export interface IFeature extends IAnonFeature {
+export interface ILanguage extends IAnonLanguage {
   color: string;
-  id: FeatureId;
-  type: FeatureType;
+  id: LanguageId;
+  type: LanguageType;
 }
 
 export interface IStoreState {
-  features: IFeatureTypeMap<IFeature[]>;
-  selected: IFeature[];
+  languages: ILanguageTypeMap<ILanguage[]>;
+  selected: ILanguage[];
 }

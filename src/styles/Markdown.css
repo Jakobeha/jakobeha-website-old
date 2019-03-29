@@ -1,0 +1,14 @@
+.Markdown {
+  padding: 16px 12.5vw;
+}
+
+.Markdown-message {
+  font-size: large;
+  text-align: left;
+}
+
+.Markdown-visit {
+  display: block;
+  padding: 32px;
+  font-size: 64px;
+}

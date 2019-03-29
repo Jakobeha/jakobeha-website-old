@@ -1,4 +1,4 @@
-.FeatureTab {
+.LanguageTab {
   height: 64px;
   line-height: 64px;
   color: white;
@@ -7,7 +7,7 @@
   z-index: 1;
 }
 
-.FeatureTab-closeButton {
+.LanguageTab-closeButton {
   position: absolute;
   top: 0;
   left: 0;
@@ -19,7 +19,7 @@
   background-color: rgba(0, 0, 0, 25%);
 }
 
-.FeatureTab-title {
+.LanguageTab-title {
   margin: 0;
   flex-grow: 1;
 }

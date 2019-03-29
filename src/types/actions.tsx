@@ -1,18 +1,18 @@
-import { IFeature } from '.';
+import { ILanguage } from '.';
 
 export enum ActionType {
-  SelectFeature = "selectFeature",
-  DeselectFeature = "deselectFeature"
+  SelectLanguage = "selectLanguage",
+  DeselectLanguage = "deselectLanguage"
 }
 
-export interface ISelectFeature {
-  type: typeof ActionType.SelectFeature;
-  feature: IFeature;
+export interface ISelectLanguage {
+  type: typeof ActionType.SelectLanguage;
+  language: ILanguage;
 }
 
-export interface IDeselectFeature {
-  type: typeof ActionType.DeselectFeature;
-  feature: IFeature;
+export interface IDeselectLanguage {
+  type: typeof ActionType.DeselectLanguage;
+  language: ILanguage;
 }
 
-export type Action = ISelectFeature | IDeselectFeature;
+export type Action = ISelectLanguage | IDeselectLanguage;
