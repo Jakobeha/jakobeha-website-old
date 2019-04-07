@@ -7,8 +7,11 @@
   z-index: 1;
 }
 
-.LanguageTab-closeButton {
+.LanguageTab-left {
   position: absolute;
+}
+
+.LanguageTab-closeButton {
   top: 0;
   left: 0;
   bottom: 0;
@@ -17,6 +20,14 @@
   font-size: 48px;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 25%);
+}
+
+.LanguageTab-icon {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 56px;
+  height: 56px;
 }
 
 .LanguageTab-title {

@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { Action, ActionType, ISelectLanguage } from 'src/types/actions';
+import "src/styles/LanguageTabGroup.css";
 import LanguageTypeMap from 'src/util/LanguageTypeMap';
-import "../styles/LanguageTabGroup.css";
 import { ILanguage, ILanguageTypeMap, IStoreState } from "../types";
-import * as LanguageType_ from '../util/LanguageType';
+import { Action, ActionType, ISelectLanguage } from '../types/actions';
 import LanguageTab from './LanguageTab';
 
 export interface IPropsState {
@@ -23,25 +22,24 @@ function LanguageTabGroup({ languagesByType, selectLanguage }: IProps) {
     <div className="LanguageTabGroup">
       {LanguageTypeMap.flatten(LanguageTypeMap.map(languagesByType, (languages, type) => (
         <div className="LanguageTabGroup-section">
-            <h2 className="LanguageTabGroup-section-header">{LanguageType_.title(type)}</h2>
-            <div className="LanguageTabGroup-section-content">
-              {languages.map(language => {
-                function onSelect() {
-                  selectLanguage(language);
-                }
-                return (
-                  <div
-                    className="LanguageTabGroup-item"
-                    key={language.name}
-                    onClick={onSelect}
-                  >
-                    <LanguageTab language={language} isClosable={false} isSticky={false} />
-                    <div className="LanguageTabGroup-item-shadow" />
-                  </div>
-                );
-              })}
-            </div>
-            <div className="LanguageTabGroup-section-footer" />
+          <div className="LanguageTabGroup-section-content">
+            {languages.map(language => {
+              function onSelect() {
+                selectLanguage(language);
+              }
+              return (
+                <div
+                  className="LanguageTabGroup-item"
+                  key={language.name}
+                  onClick={onSelect}
+                >
+                  <LanguageTab language={language} isClosable={false} isSticky={false} />
+                  <div className="LanguageTabGroup-item-shadow" />
+                </div>
+              );
+            })}
+          </div>
+          <div className="LanguageTabGroup-section-footer" />
         </div>
       )))}
     </div>

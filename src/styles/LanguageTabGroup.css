@@ -5,12 +5,7 @@
 
 .LanguageTabGroup-section {
   flex-grow: 1;
-  margin: 16px;
-}
-
-.LanguageTabGroup-header {
-  margin-top: 64px;
-  text-align: center;
+  margin: 32px 16px;
 }
 
 .LanguageTabGroup-section-content {
@@ -46,5 +41,6 @@
 
 .LanguageTabGroup-section-footer {
   height: 8px;
-  background-color: #444;
+  background-color: #333;
+  box-shadow: 4px 4px 32px rgba(0, 0, 0, 50%);
 }

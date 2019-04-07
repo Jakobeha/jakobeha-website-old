@@ -1,3 +1,4 @@
+import { MAX_SELECTED_LANGUAGES } from './constants';
 import { ILanguage, IStoreState } from './types';
 import { Action, ActionType } from './types/actions';
 
@@ -5,7 +6,12 @@ export function reduce(state: IStoreState, action: Action): IStoreState {
   switch (action.type) {
     case ActionType.SelectLanguage: {
       const selected: ILanguage[] = Array.from(state.selected);
-      selected.push(action.language);
+      if (!selected.includes(action.language)) {
+        if (selected.length === MAX_SELECTED_LANGUAGES) {
+          selected.shift();
+        }
+        selected.push(action.language);
+      }
       return { ...state, selected };
     }
     case ActionType.DeselectLanguage: {

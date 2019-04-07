@@ -4,46 +4,21 @@
 
 .App-header {
   background-color: #222;
-  height: 128px;
-  padding-top: 8px;
+  min-height: 80px;
+  padding: 8px 32px;
   color: white;
+}
+
+.App-icon {
+  float: left;
+  height: 96px;
+  margin: -8px 8px -8px auto;
 }
 
 .App-title {
   display: block;
   font-size: 2em;
-  height: 48px;
+  min-height: 40px;
   line-height: 48px;
-  margin: 16px 64px 16px 64px;
-}
-
-.App-links {
-  display: flex;
-  height: 48px;
-  margin-bottom: 0;
-}
-
-.App-link {
-  display: block;
-  flex-grow: 1;
-  color: inherit;
-  text-decoration: none;
-  line-height: 48px;
-  font-size: large;
-}
-
-.App-link-intro {
-  background-color: darkcyan;
-}
-
-.App-link-main {
-  background-color: darkolivegreen;
-}
-
-.App-link-works-cited {
-  background-color: darkgoldenrod;
-}
-
-.App-link-context-note {
-  background-color: darkslategray;
+  margin: 16px 32px 16px 32px;
 }

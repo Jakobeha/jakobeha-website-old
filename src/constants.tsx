@@ -4,6 +4,7 @@ import * as LanguageType_ from './util/LanguageType';
 import LanguageTypeMap from './util/LanguageTypeMap';
 
 export const NULL_LANGUAGE_COLOR: string = "#888888";
+export const NULL_LANGUAGE_ICON: string = "pug";
 
 const LANGUAGE_HUES: ILanguageTypeMap<number> = {
   general: 100,
@@ -12,12 +13,14 @@ const LANGUAGE_HUES: ILanguageTypeMap<number> = {
   other: 290
 };
 
+const LANGUAGE_HEADER_COLOR: string = "#333";
+
 export const LANGUAGES: ILanguageTypeMap<ILanguage[]> = LanguageTypeMap.map(
   ANON_LANGUAGES as ILanguageTypeMap<IAnonLanguage[]>,
   (languages, type) =>
     languages.map((anon, idx) => {
       const ratio = idx / languages.length;
-      const color = `hsl(${LANGUAGE_HUES[type]}, 100%, ${ratio * 50 + 25}%)`;
+      const color = (idx === 0) ? LANGUAGE_HEADER_COLOR : `hsl(${LANGUAGE_HUES[type]}, 100%, ${ratio * 50 + 25}%)`;
 
       const language: ILanguage = {
         ...anon,
@@ -28,3 +31,5 @@ export const LANGUAGES: ILanguageTypeMap<ILanguage[]> = LanguageTypeMap.map(
       return language;
     })
 );
+
+export const MAX_SELECTED_LANGUAGES: number = 3;

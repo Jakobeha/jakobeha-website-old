@@ -12,17 +12,18 @@ export interface IProps {
 export default function LanguageWindow({ languages }: IProps): JSX.Element {
   if (languages.length === 0) {
     return (
-      <div className="LanguageWindow LanguageWindow-empty">
-        <LanguageTab language={null} isClosable={false} isSticky={true} />,
-        <p className="LanguageWinow-empty-message">
-          Select a language to learn more about it, then select more to compare them.
-        </p>
+      <div className="LanguageWindow LanguageWindow-empty" id="window">
+        <LanguageTab language={null} isClosable={false} isSticky={true} />
+        <div className="LanguageWindow-empty-message">
+          <p>Select a language to learn more about it, then select more to compare them.</p>
+          <p>Select a header (e.g. "Scripting") to learn general information about languages in that category.</p>
+        </div>
       </div>
     );
   } else {
     const languageWidth = 100 / languages.length;
     return (
-      <div className="LanguageWindow">
+      <div className="LanguageWindow" id="window">
         {Util.transpose(
           languages.map(language => {
             const sections = [

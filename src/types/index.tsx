@@ -16,6 +16,7 @@ export type AttrString = string;
 
 export interface IAnonLanguage {
   name: string;
+  icon: string;
   summary?: AttrString;
   keyFeatures?: AttrString[];
   benefits?: AttrString[];

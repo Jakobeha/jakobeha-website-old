@@ -1,5 +1,6 @@
 export function updateOnScroll() {
   window.addEventListener("scroll", updateAll);
+  window.addEventListener("resize", updateAll);
 }
 
 export function updateAll() {
