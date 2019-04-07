@@ -48,9 +48,8 @@ function LanguageTab({ language, isClosable, isSticky, close }: IProps) {
         <div className="LanguageTab-left LanguageTab-closeButton" onClick={close}>
           x
         </div>
-      ) : (
-        <img className="LanguageTab-left LanguageTab-icon" src={getIcon(language !== null ? language.icon : NULL_LANGUAGE_ICON)} />
-      )}
+      ) : null}
+      <img className="LanguageTab-left LanguageTab-icon" src={getIcon(language !== null ? language.icon : NULL_LANGUAGE_ICON)} />
       <h2 className="LanguageTab-title">{language !== null ? language.name : "No Languages Selected" }</h2>
     </div>
   );

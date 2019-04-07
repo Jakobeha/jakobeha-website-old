@@ -1,4 +1,5 @@
 import * as React from 'react';
+import BackgroundImage from '../resources/background.png';
 import ScriptImage from '../resources/script.svg';
 import '../styles/App.css';
 import Comparison from './Comparison';
@@ -12,7 +13,10 @@ export default function App({}: {}): JSX.Element {
         <img className="App-icon" src={ScriptImage} />
         <h1 className="App-title">Programming Language Comparison</h1>
       </header>
-      {specificContent()}
+      <div className="App-content" style={{ backgroundImage: `url(${BackgroundImage})` }}>
+        <div className="App-background" />
+        {specificContent()}
+      </div>
     </div>
   );
 }

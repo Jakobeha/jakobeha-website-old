@@ -1,2 +1,9 @@
 .Intro {
+  color: hsl(54, 64%, 8.5%);
+}
+
+.Intro hr {
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 50%);
+  border: 1px #333 solid;
+  margin: 0 64px;
 }

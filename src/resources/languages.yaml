@@ -179,7 +179,7 @@ general:
   - https://www.youtube.com/watch?v=WBPrJSw7yQA
 scripting:
 - name: Scripting
-  icon: folder-scripts
+  icon: folder-sass
   summary: "Designed to write working code fast, even if it isn't maintainable long-term"
   keyFeatures:
   - 'Usually **weak types** (explicit type annotations would require you to write more code)'
@@ -195,7 +195,7 @@ scripting:
   - 'Prototypes for larger programs'
   - 'Programming exercises'
 - name: Bash
-  icon: bash
+  icon: console
   summary: Very small language and interpreter used by the command line
   keyFeatures:
   - "**Procedural:** no support for objects. [Source](https://stackoverflow.com/questions/36771080/creating-classes-and-objects-using-bash-scripting/36771175)"
@@ -667,7 +667,7 @@ other:
   - http://www.ocaml.org/learn/
   - https://youtube.com/watch?v=xTsHMja8joA
 - name: Prolog
-  icon: owl
+  icon: prolog
   summary: "A common, Turing-complete logical programming language"
   keyFeatures:
   - "**Logical programming**: a unique computation model where statements are \"facts\" that describe a problem, and the interpreter tries to solve the problem like an equation"
@@ -719,7 +719,7 @@ other:
   history: A very old language developed in the 1970s, there are many different versions. [Source](https://web.archive.org/web/20060615225746/http://www.brics.dk/~hosc/local/HOSC-11-4-pp399-404.pdf)
   example: |
     Works in most dialects, including [MIT Scheme](http://web.mit.edu/~axch/www/scheme/choices/mit-scheme.html) and [Racket](https://racket-lang.org/)
-    ```scm
+    ```scheme
     (define (area-of-square square)
       (let ([width (cadr square)]))
         (* width width)))

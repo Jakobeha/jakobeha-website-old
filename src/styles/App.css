@@ -1,12 +1,16 @@
 .App {
   text-align: center;
+  font-family: Roboto;
+  overflow: hidden;
 }
 
 .App-header {
+  position: relative;
   background-color: #222;
   min-height: 80px;
   padding: 8px 32px;
   color: white;
+  z-index: 1;
 }
 
 .App-icon {
@@ -21,4 +25,19 @@
   min-height: 40px;
   line-height: 48px;
   margin: 16px 32px 16px 32px;
+}
+
+.App-content {
+  position: relative;
+  background: rgb(239, 233, 183) repeat top;
+}
+
+.App-background {
+  background-color: rgba(239, 233, 183);
+  filter: blur(16px);
+  top: 0;
+  left: 9.375vw;
+  right: 9.375vw;
+  bottom: 0;
+  position: absolute;
 }

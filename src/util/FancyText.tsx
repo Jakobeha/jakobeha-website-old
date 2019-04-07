@@ -1,5 +1,5 @@
 import * as HighlightJs from 'highlight.js';
-import 'highlight.js/styles/default.css';
+import 'highlight.js/styles/github.css';
 import Interweave from "interweave";
 import * as MarkdownIt from 'markdown-it';
 import * as React from 'react';

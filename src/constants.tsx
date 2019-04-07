@@ -4,13 +4,13 @@ import * as LanguageType_ from './util/LanguageType';
 import LanguageTypeMap from './util/LanguageTypeMap';
 
 export const NULL_LANGUAGE_COLOR: string = "#888888";
-export const NULL_LANGUAGE_ICON: string = "pug";
+export const NULL_LANGUAGE_ICON: string = "credits";
 
 const LANGUAGE_HUES: ILanguageTypeMap<number> = {
   general: 100,
-  scripting: 30,
+  scripting: 290,
   efficient: 210,
-  other: 290
+  other: 30
 };
 
 const LANGUAGE_HEADER_COLOR: string = "#333";

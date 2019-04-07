@@ -8,6 +8,7 @@
 
 - Script icon: https://openclipart.org/detail/211867/matticonstextxgenericscript
 - Language icons: https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+  - Prolog icon: https://iconscout.com/icon/prolog
 
 ## Code
 
