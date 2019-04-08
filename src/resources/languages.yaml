@@ -275,7 +275,7 @@ scripting:
   benefits:
   - "**A good first language** because it's simple, used by many \"learn to code\" sites like [Codeacademy](https://www.codecademy.com/learn/learn-python)"
   - '**Concise:** designed so you can write code as fast as possible'
-  - '**Good for AI:** Lots of Artificial Intelligence and math libraries are written in Python. [List](https://wiki.python.org/moin/)PythonForArtificialIntelligence]'
+  - '**Good for AI:** Lots of Artificial Intelligence and math libraries are written in Python. [List](https://wiki.python.org/moin/PythonForArtificialIntelligence)'
   drawbacks:
   - 'Not designed for large programs'
   - "**Slow** because it's interpreted"
