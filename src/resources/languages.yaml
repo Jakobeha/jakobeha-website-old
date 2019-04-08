@@ -718,7 +718,7 @@ other:
   - 'Teaching / learning core programming concepts'
   history: A very old language developed in the 1970s, there are many different versions. [Source](https://web.archive.org/web/20060615225746/http://www.brics.dk/~hosc/local/HOSC-11-4-pp399-404.pdf)
   example: |
-    Works in most dialects, including [MIT Scheme](http://web.mit.edu/~axch/www/scheme/choices/mit-scheme.html) and [Racket](https://racket-lang.org/)
+    Works in most dialects, including [MIT Scheme](https://groups.csail.mit.edu/mac/projects/scheme/) and [Racket](https://racket-lang.org/)
     ```scheme
     (define (area-of-square square)
       (let ([width (cadr square)]))
