@@ -1,0 +1,18 @@
+.ListEntry {
+  background-color: transparent;
+  box-shadow: none;
+  overflow-y: visible;
+}
+
+.ListEntry>div {
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 50%);
+}
+
+.ListEntry>.Entry-content {
+  margin-left: 32px;
+  padding: 0;
+}
+
+.ListEntry-item {
+  background-color: #282828;
+}

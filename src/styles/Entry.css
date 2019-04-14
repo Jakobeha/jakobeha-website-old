@@ -1,0 +1,47 @@
+.Entry {
+  background-color: white;
+  overflow-y: hidden;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 50%);
+  display: flex;
+  flex-direction: column;
+  min-height: 48px;
+}
+
+.Entry+.Entry {
+  margin-top: 8px;
+}
+
+.Entry-header {
+  background-color: #222;
+  height: 48px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 50%);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.Entry-title {
+  margin: 0;
+  padding-left: 12px;
+  color: white;
+  line-height: 48px;
+  display: block;
+  float: left
+}
+
+.Entry-pointer {
+  display: inline-block;
+}
+
+.Entry-pointer-expanded {
+  transform: rotate(90deg);
+}
+
+.Entry-content {
+  overflow-y: scroll;
+  padding: 4px;
+}
+
+.Entry-content p, .Entry-content h3, .Entry-content ul {
+  margin: 0;
+  padding: .5em 0;
+}

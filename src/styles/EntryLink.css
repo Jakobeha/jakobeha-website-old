@@ -1,0 +1,20 @@
+.EntryLink {
+  margin-right: 0;
+  display: flex;
+  float: right;
+  padding-right: 12px;
+  line-height: 48px;
+  font-size: 1.25em;
+  color: #CCC;
+  white-space: pre;
+  text-decoration: none;
+}
+
+.EntryLink-text {
+  text-decoration: underline;
+}
+
+.EntryLink-icon.material-icons-sharp {
+  font-size: 1.25em;
+  line-height: 48px;
+}

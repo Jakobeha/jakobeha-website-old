@@ -1,0 +1,5 @@
+This is a website to compare programming languages. You can select a language and view its key features, benefits, drawbacks, and more. You can select multiple languages and view their information side-by-side. The website presents information particularly useful for comparison, but if you want to learn more about a particular language, there are links and tutorials.
+
+This is an assignment for a class at Northeastern, **ENGW3302 First Year Writing**. I had to create a "public document", and choose the type of document, audience, and purpose. I created an intereactive website for novice developers who want to choose a language (e.g. to start a project or to learn about), designed to help them select the language(s) which will best achieve their goals.
+
+This website was created using [React](https://reactjs.org/) and [TypeScript](https://www.typescriptlang.org/), using [this tutorial and starter code](https://github.com/Microsoft/TypeScript-React-Starter). It also uses libraries from [NPM](https://www.npmjs.com/). Published by [Now](https://zeit.co/now).

@@ -1,43 +1,35 @@
 .App {
-  text-align: center;
   font-family: Roboto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   overflow: hidden;
 }
 
-.App-header {
-  position: relative;
-  background-color: #222;
-  min-height: 80px;
-  padding: 8px 32px;
-  color: white;
-  z-index: 1;
-}
-
-.App-icon {
-  float: left;
-  height: 96px;
-  margin: -8px 8px -8px auto;
-}
-
-.App-title {
+.App>span {
+  margin: 0;
+  padding: 0;
   display: block;
-  font-size: 2em;
-  min-height: 40px;
-  line-height: 48px;
-  margin: 16px 32px 16px 32px;
+}
+
+.App-name {
+  margin: 0;
+  padding: 8px;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 50%);
+  font-size: 2em
 }
 
 .App-content {
-  position: relative;
-  background: rgb(239, 233, 183) repeat top;
+  display: flex;
+  padding: 0 8px 8px 8px;
+  overflow: hidden;
+  flex-grow: 1;
 }
 
-.App-background {
-  background-color: rgba(239, 233, 183);
-  filter: blur(16px);
-  top: 0;
-  left: 9.375vw;
-  right: 9.375vw;
-  bottom: 0;
+.App-bg-credit {
   position: absolute;
+  bottom: 16px;
+  right: 16px;
+  color: rgba(255, 255, 255, 75%);
 }

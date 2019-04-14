@@ -1,0 +1,5 @@
+### Proposal for an Experiment to Investigate (Partial) Memory Management's Effect on Code Clarity
+
+This is a made-up formal proposal for Winthrop High School (a local school), to conduct an experiment which would help determine memory management's effect on code clarity. It focuses on "partial" memory management, which is implemented in [Rust](https://www.rust-lang.org/) and [Swift](https://swift.org/), where the the compiler helps significantly but user must still write some memory-managing code. It explains why the school should conduct the experiment: in essence, nobody else has investigated "partial" memory management's effect on code clarity, and the school itself is just starting to implement computer science into its curriculum.
+
+This is an assignment for a class at Northeastern, **ENGW3302 First Year Writing**. I had to write a formal paper directed towards academics and professionals in my field. The assignment was designed to teach us how to write professional documents, such as research papers.

@@ -1,0 +1,13 @@
+.Section {
+  width: 50%;
+  padding: 0 8px 8px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Section-title {
+  margin: 0;
+  padding: 0 8px 8px 8px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 50%);
+  color: white;
+}
