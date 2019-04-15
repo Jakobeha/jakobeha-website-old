@@ -14,9 +14,12 @@
 .Entry-header {
   background-color: #222;
   height: 48px;
+  min-height: 48px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 50%);
   cursor: pointer;
   overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .Entry-title {
@@ -25,7 +28,8 @@
   color: white;
   line-height: 48px;
   display: block;
-  float: left
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .Entry-pointer {
