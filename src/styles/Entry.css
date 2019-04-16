@@ -45,7 +45,28 @@
   padding: 4px;
 }
 
-.Entry-content p, .Entry-content h3, .Entry-content ul {
+.Entry-content h1, .Entry-content h2:not(.Entry-title), .Entry-content h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.Entry-content p, .Entry-content ul {
   margin: 0;
   padding: .5em 0;
+}
+
+.Entry-content li {
+  margin-left: 1em;
+}
+
+.Entry-content pre {
+  margin: 0;
+  padding: 1em;
+  overflow-x: scroll;
+}
+
+.Entry-content blockquote {
+  border-left: #444 1px solid;
+  margin: 0 0 0 .25em;
+  padding: 0 0 0 .5em;
 }
