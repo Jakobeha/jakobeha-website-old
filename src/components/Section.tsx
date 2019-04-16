@@ -70,7 +70,7 @@ export default class Section extends React.Component<IProps, IState, {}> {
             expand: !listExpanded,
             setExpand: setRouletteExpand(false),
           }),
-          <ListEntry key="list" expand={listExpanded} setExpand={setRouletteExpand(true)} entries={children.map(child => child.props.title)} selectEntry={selectRow} />
+          <ListEntry key="list" expand={listExpanded} setExpand={setRouletteExpand(true)} entries={children.map(child => child.props)} selectEntry={selectRow} />
         ];
       case SectionStyle.Row:
         return children.map((child, idx) => React.cloneElement(child, {
