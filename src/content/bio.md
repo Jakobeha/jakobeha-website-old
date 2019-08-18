@@ -1,2 +1,1 @@
-I'm a Northeastern University sophomore studying Computer Science. I'm particularly interested in design patterns, programming languages, metaprogramming, and static analysis - informally, "how do we make programming easier?" I plan to go to a graduate school, research these interests,
-and contribute whatever information I can to academia.
+I'm a Northeastern University junior studying Computer Science, planning to go to graduate school. I'm currently researching programming language design, static analysis, and developer tools, although I'm interested in other media creation tools as well. My goal is to make it easier for more people to create digital content, and improve existing content.

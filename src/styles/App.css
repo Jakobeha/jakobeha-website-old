@@ -6,7 +6,7 @@
   overflow: hidden;
 }
 
-.App>span {
+.App > span {
   margin: 0;
   padding: 0;
   display: block;
@@ -17,7 +17,7 @@
   padding: 8px;
   color: white;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 50%);
-  font-size: 2em
+  font-size: 2em;
 }
 
 .App-content {
@@ -29,7 +29,7 @@
 
 .App-bg-credit {
   position: absolute;
-  bottom: 16px;
+  top: 16px;
   right: 16px;
   color: rgba(255, 255, 255, 75%);
 }
